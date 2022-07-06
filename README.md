@@ -17,3 +17,4 @@
 2. Modificar en Templates la ruta de acceso
 3. Crear entorno virtual
 4. Instalar Django/requirements
+5. Levantar servidor

@@ -11580,7 +11580,7 @@ body {
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  -webkit-text-fill-color: gray;
+  -webkit-text-fill-color: white;
   -webkit-background-clip: text;
           background-clip: text;
 }
