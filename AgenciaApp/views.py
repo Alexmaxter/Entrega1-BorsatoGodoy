@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Auto
-from .forms import FormularioAuto
+from .forms import BusquedaAuto, FormularioAuto
 
 # Create your views here.
 
@@ -34,7 +34,18 @@ def crear_auto(request):
 
 
 def buscar_auto(request):
-    pass
+
+    marca_de_busqueda = request.GET.get("marca")
+
+    if marca_de_busqueda:
+        listado_autos = Auto.objects.filter(marca__icontains=marca_de_busqueda)
+    else:
+        listado_autos = Auto.objects.all()
+
+    form = BusquedaAuto()
+    return render(
+        request, "buscar_auto.html", {"listado_autos": listado_autos, "form": form}
+    )
 
 
 def sobre_nosotros(request):

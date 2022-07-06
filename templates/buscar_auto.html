@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{%block title%}
+<title>Creación de autos</title>
+{%endblock title%} 
+
+{% block header %}
+<h1 class="mx-auto my-0 text-uppercase">Busqueda</h1>
+<p>
+    <form action={% url 'buscar_auto' %}>
+        {{form}}
+        <button class="btn btn-primary">Buscar</button>
+
+    </form>
+
+    <p>
+        {% if listado_autos %}
+        <ul>
+            {%for auto in listado_autos%}
+            <li>Marca: {{auto.marca}} | Color: {{auto.color}} | Modelo: {{auto.modelo}}</li>
+            {%endfor%}
+        </ul>
+        {% else %}
+        <ul>
+        <li>No se ha encontrado ningún valor.</li>
+        </ul>
+        {% endif %}
+        
+        
+    </p>
+    {% endblock header %}
+</p>
