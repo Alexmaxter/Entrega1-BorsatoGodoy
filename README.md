@@ -13,7 +13,7 @@
 - Sobre nosotros
 
 # PARA PROBAR LA APP
-1. ir a Agencia\settings.py
+1. Ir a Agencia\settings.py
 2. Modificar en Templates la ruta de acceso
 3. Crear entorno virtual
-4. instalar Django/requirements
+4. Instalar Django/requirements

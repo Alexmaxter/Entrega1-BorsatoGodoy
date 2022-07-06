@@ -12,19 +12,23 @@ def index(request):
 
 
 def crear_auto(request):
+
     if request.method == "POST":
+
         formulario_auto = FormularioAuto(request.POST)
         print(formulario_auto)
 
         if formulario_auto.is_valid:
+            
             informacion = formulario_auto.cleaned_data
+            
             auto = Auto(
                 marca=informacion["marca"],
                 color=informacion["color"],
                 modelo=informacion["modelo"],
             )
+            
             auto.save()
-
             return render(request, "crear_auto.html")
 
     else:

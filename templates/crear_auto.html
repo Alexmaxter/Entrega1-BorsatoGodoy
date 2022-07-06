@@ -7,17 +7,19 @@
 
 {% block header %}
 <h1 class="mx-auto my-0 text-uppercase">Creación de vehiculo</h1>
+
 <p>
+
   <form action={% url 'crear_auto' %} method="post">
-    {% csrf_token %}
     
+    {% csrf_token %}
     <table align='center'>{{form.as_table}}</table>
 
     <br>
 
     <button class="btn btn-primary" href="#about">Crear</button>
     
-  
   </form>
 </p>
+
 {% endblock %}
